@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào Em!</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px; /* Thêm đệm để tránh va chạm với viền màn hình */
+            box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều cao */
+        }
+        .message-container {
+            display: none; /* Ẩn các bước ban đầu */
+            width: 100%; /* Chiếm toàn bộ chiều rộng */
+            height: 100%; /* Chiếm toàn bộ chiều cao */
+            background-size: cover; /* Kéo dài hình ảnh để phủ toàn bộ */
+            background-position: center; /* Căn giữa hình ảnh */
+        }
+        .active {
+            display: block; /* Hiển thị bước đang hoạt động */
+        }
+        h1 {
+            font-size: 24px; /* Kích thước chữ lớn cho điện thoại */
+            line-height: 1.4; /* Khoảng cách giữa các dòng */
+            margin: 10px 0; /* Khoảng cách trên và dưới */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để dễ đọc hơn */
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 25px; /* Tăng kích thước nút bấm */
+            font-size: 18px; /* Kích thước chữ của nút bấm */
+            border: none;
+            border-radius: 8px; /* Bo tròn góc */
+            background-color: #ff5c5c;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%; /* Nút chiếm toàn bộ chiều rộng */
+            max-width: 300px; /* Giới hạn chiều rộng nút */
+        }
+        button:hover {
+            background-color: #ff3030;
+        }
+        .hidden {
+            display: none; /* Định nghĩa lớp Hidden để ẩn các phần tử */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bước 1 -->
+    <div id="message1" class="message-container active" style="background-image: url('anh1.jpg');">
+        <h1>Chào em! Anh rất vui vì em đang đọc tin nhắn này.</h1>
+        <button onclick="nextMessage(1)">Tiếp tục</button>
+    </div>
+
+    <!-- Bước 2 -->
+    <div id="message2" class="message-container" style="background-image: url('anh2.jpg');">
+        <h1>Liệu em có còn nhớ, lời anh đã chúc em ngày 14/2?</h1>
+        <button onclick="nextMessage(2)">Tiếp tục</button>
+    </div>
+
+    <!-- Bước 3 -->
+    <div id="message3" class="message-container" style="background-image: url('anh3.jpg');">
+        <h1 id="message1Text">Anh đã chúc 14/2 năm nay sẽ là năm cuối cùng em một mình.</h1>
+        <h1 id="message2Text" class="hidden">Và anh muốn là người thực hiện lời chúc ấy.</h1>
+        <button id="continueButton" onclick="showNextMessage()">Tiếp tục</button>
+    </div>
+
+    <script>
+        let currentMessageIndex = 0;
+        const messages = [
+            { element: document.getElementById('message1'), background: '#ff5c5c' },
+            { element: document.getElementById('message2'), background: '#ff8c5c' },
+            { element: document.getElementById('message3'), background: '#ffbc5c' }
+        ];
+
+        function nextMessage(index) {
+            // Ẩn thông điệp hiện tại
+            messages[currentMessageIndex].element.classList.remove('active');
+            currentMessageIndex++;
+            // Nếu còn thông điệp, hiển thị và thay đổi màu nền
+            if (currentMessageIndex < messages.length) {
+                messages[currentMessageIndex].element.classList.add('active');
+            }
+        }
+
+        function showNextMessage() {
+            const message2Text = document.getElementById('message2Text');
+
+            if (message2Text.classList.contains('hidden')) {
+                message2Text.classList.remove('hidden');
+                // Ẩn nút "Tiếp tục" sau khi thông điệp thứ hai xuất hiện
+                document.getElementById('continueButton').style.display = 'none';
+            }
+        }
+
+        // Đặt màu nền ban đầu
+        document.body.style.background = messages[currentMessageIndex].background;
+    </script>
+
+</body>
+</html>
