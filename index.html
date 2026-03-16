@@ -41,11 +41,9 @@
             display: block; /* Hiển thị bước đang hoạt động */
         }
         h1 {   
-            font-size: 28px; /* Kích thước chữ lớn cho điện thoại */
-            line-height: 1.2; /* Khoảng cách giữa các dòng */
-            max-height: 2.4em; /* Giới hạn chiều cao cho 2 dòng (2 x line-height) */
-            white-space: normal; /* Cho phép nội dung xuống dòng */
-            margin: 200px; /* Thay đổi để không có khoảng cách bên ngoài */
+            font-size: 26px; /* Kích thước chữ lớn cho điện thoại */
+            line-height: 0.8; /* Khoảng cách giữa các dòng */
+            margin: 250px; /* Thay đổi để không có khoảng cách bên ngoài */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để dễ đọc hơn */
         }
         button {
@@ -75,19 +73,22 @@
 
     <!-- Bước 1 -->
     <div id="message1" class="message-container active" style="background-image: url('anh1.jpg');">
-        <h1>Chào em! Anh rất vui vì em đang đọc tin nhắn này.</h1>
+        <h1>Chào em! Anh rất vui </h1>
+        <h1>vì em đang đọc tin nhắn này.</h1>
         <button onclick="nextMessage(1)">Tiếp tục</button>
     </div>
 
     <!-- Bước 2 -->
     <div id="message2" class="message-container" style="background-image: url('anh2.jpg');">
-        <h1>Liệu em có còn nhớ, lời anh đã chúc em ngày 14/2?</h1>
+        <h1>Liệu em có còn nhớ, </h1>
+        <h1>lời anh đã chúc em ngày 14/2?</h1>
         <button onclick="nextMessage(2)">Tiếp tục</button>
     </div>
 
     <!-- Bước 3 -->
     <div id="message3" class="message-container" style="background-image: url('anh3.jpg');">
-        <h1 id="message1Text">Anh đã chúc 14/2 năm nay sẽ là năm cuối cùng em một mình.</h1>
+        <h1 id="message1Text">Anh đã chúc 14/2 năm nay</h1>
+        <h1 id="message1Text">sẽ là năm cuối cùng em một mình.</h1>
         <h1 id="message2Text" class="hidden">Và anh muốn là người thực hiện lời chúc ấy.</h1>
         <img src="anh4.jpg" alt="Anh 4" class="overlay-image" />
         <button id="continueButton" onclick="showNextMessage()">Tiếp tục</button>
