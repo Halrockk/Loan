@@ -10,8 +10,8 @@
             top: 80%; /* Căn giữa theo chiều dọc */
             left: 50%; /* Căn giữa theo chiều ngang */
             transform: translate(-50%, -50%); /* Đưa ảnh về giữa */
-            max-width: 60%; /* Giới hạn kích thước hình ảnh */
-            max-height: 60%; /* Giới hạn kích thước hình ảnh */
+            max-width: 30%; /* Giới hạn kích thước hình ảnh */
+            max-height: 30%; /* Giới hạn kích thước hình ảnh */
             z-index: 1; /* Đảm bảo hình ảnh nằm trên nền */
         }
         body {
@@ -39,10 +39,10 @@
             display: block; /* Hiển thị bước đang hoạt động */
         }
         h1 {
-            font-size: 24px; /* Kích thước chữ lớn cho điện thoại */
+            font-size: 30px; /* Kích thước chữ lớn cho điện thoại */
             line-height: 1.4; /* Khoảng cách giữa các dòng */
-            margin: 0; /* Thay đổi để không có khoảng cách bên ngoài */
-            padding-bottom: 120px; /* Thêm đệm bên dưới để không đè lên ảnh overlay */
+            margin: 100px; /* Thay đổi để không có khoảng cách bên ngoài */
+            padding-bottom: 20px; /* Thêm đệm bên dưới để không đè lên ảnh overlay */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để dễ đọc hơn */
         }
         button {
@@ -77,8 +77,8 @@
                 margin-top: 40px; /* Điều chỉnh khoảng cách trên nút bấm */
             }
             .overlay-image {
-                max-width: 80%; /* Tăng kích thước ảnh overlay cho phù hợp */
-                max-height: 80%; /* Tăng kích thước ảnh overlay cho phù hợp */
+                max-width: 100%; /* Tăng kích thước ảnh overlay cho phù hợp */
+                max-height: 100%; /* Tăng kích thước ảnh overlay cho phù hợp */
             }
         }
     </style>
@@ -108,9 +108,9 @@
     <script>
         let currentMessageIndex = 0;
         const messages = [
-            { element: document.getElementById('message1'), background: '#ff5c5c' },
-            { element: document.getElementById('message2'), background: '#ff8c5c' },
-            { element: document.getElementById('message3'), background: '#ffbc5c' }
+            { element: document.getElementById('message1'), background: '#a509f4' },
+            { element: document.getElementById('message2'), background: '#a509f4' },
+            { element: document.getElementById('message3'), background: '#a509f4' }
         ];
 
         function nextMessage(index) {
