@@ -19,8 +19,8 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Căn giữa theo chiều dọc */
-            align-items: center; /* Căn giữa theo chiều ngang */
+            justify-content: center;
+            align-items: center;
             transition: background 0.5s;
             color: white;
             font-family: 'Arial', sans-serif;
@@ -41,12 +41,12 @@
         h1 {
             font-size: 24px; /* Kích thước chữ lớn cho điện thoại */
             line-height: 1.4; /* Khoảng cách giữa các dòng */
-            margin: 200px; /* Loại bỏ margin */
-            padding: 20px 0; /* Tạo khoảng cách bằng padding */
+            margin: 0; /* Thay đổi để không có khoảng cách bên ngoài */
+            padding-bottom: 120px; /* Thêm đệm bên dưới để không đè lên ảnh overlay */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để dễ đọc hơn */
         }
         button {
-            margin-top: 20px; /* Khoảng cách giữa nút và nội dung */
+            margin-top: 20px; /* Giảm khoảng cách ở đây */
             padding: 15px 25px; /* Tăng kích thước nút bấm */
             font-size: 18px; /* Kích thước chữ của nút bấm */
             border: none;
@@ -63,6 +63,23 @@
         }
         .hidden {
             display: none; /* Định nghĩa lớp Hidden để ẩn các phần tử */
+        }
+
+        /* Media Queries cho điện thoại */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 18px; /* Giảm kích thước chữ cho điện thoại */
+                padding-bottom: 80px; /* Thay đổi đệm dưới cho h1 để không đè lên anh4 */
+            }
+            button {
+                padding: 10px 15px; /* Giảm kích thước nút bấm */
+                font-size: 16px; /* Giảm kích thước chữ của nút bấm */
+                margin-top: 40px; /* Điều chỉnh khoảng cách trên nút bấm */
+            }
+            .overlay-image {
+                max-width: 80%; /* Tăng kích thước ảnh overlay cho phù hợp */
+                max-height: 80%; /* Tăng kích thước ảnh overlay cho phù hợp */
+            }
         }
     </style>
 </head>
