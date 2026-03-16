@@ -7,11 +7,11 @@
     <style>
         .overlay-image {
             position: absolute;
-            top: 15%; /* Căn giữa theo chiều dọc */
+            top: 20%; /* Căn giữa theo chiều dọc */
             left: 50%; /* Căn giữa theo chiều ngang */
             transform: translate(-50%, -50%);
-            max-width: 35%;
-            max-height: 35%;
+            max-width: 50%;
+            max-height: 50%;
             z-index: 1;
         }
         body {
@@ -42,7 +42,7 @@
         h2 {
             font-size: 26px;
             line-height: 1.2;
-            margin: 20px 0 0;
+            margin: 40px 0 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         h1 {
@@ -95,8 +95,8 @@
 
     <!-- Bước 3 -->
     <div id="message3" class="message-container" style="background-image: url('anh3.jpg');">
-        <h1 id="message1Text">Anh đã chúc 14/2 năm nay</h1>
-        <h1>sẽ là năm cuối cùng em một mình.</h1>
+        <h1 id="message1Text">Anh đã chúc 14/2 năm nay sẽ</h1>
+        <h1>là năm cuối cùng em một mình</h1>
         <h2 id="message2Text" class="hidden">Và anh muốn là người thực hiện lời chúc ấy.</h2>
         <img src="anh4.jpg" alt="Anh 4" class="overlay-image" />
         <button id="continueButton" onclick="showNextMessage()">Tiếp tục</button>
