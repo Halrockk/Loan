@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chào Em!</title>
     <style>
-     
         .overlay-image {
-    position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối */
-    top: 80%; /* Căn giữa theo chiều dọc */
-    left: 50%; /* Căn giữa theo chiều ngang */
-    transform: translate(-50%, -50%); /* Đưa ảnh về giữa */
-    max-width: 40%; /* Giới hạn kích thước hình ảnh */
-    max-height: 40%; /* Giới hạn kích thước hình ảnh */
-    z-index: 1; /* Đảm bảo hình ảnh nằm trên nền */
-       }
+            position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối */
+            top: 80%; /* Căn giữa theo chiều dọc */
+            left: 50%; /* Căn giữa theo chiều ngang */
+            transform: translate(-50%, -50%); /* Đưa ảnh về giữa */
+            max-width: 40%; /* Giới hạn kích thước hình ảnh */
+            max-height: 40%; /* Giới hạn kích thước hình ảnh */
+            z-index: 1; /* Đảm bảo hình ảnh nằm trên nền */
+        }
         body {
             margin: 0;
             height: 100vh;
@@ -42,7 +41,7 @@
         h1 {
             font-size: 24px; /* Kích thước chữ lớn cho điện thoại */
             line-height: 1.4; /* Khoảng cách giữa các dòng */
-            margin: 200px ; /* Khoảng cách trên và dưới */
+            margin: 200px; /* Khoảng cách trên và dưới */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để dễ đọc hơn */
         }
         button {
@@ -64,6 +63,23 @@
         .hidden {
             display: none; /* Định nghĩa lớp Hidden để ẩn các phần tử */
         }
+
+        /* Media Queries cho điện thoại */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 18px; /* Giảm kích thước chữ cho điện thoại */
+                margin: 100px 0; /* Điều chỉnh khoảng cách trên và dưới */
+            }
+            button {
+                padding: 10px 15px; /* Giảm kích thước nút bấm */
+                font-size: 16px; /* Giảm kích thước chữ của nút bấm */
+                margin-top: 100px; /* Điều chỉnh khoảng cách trên nút bấm */
+            }
+            .overlay-image {
+                max-width: 60%; /* Tăng kích thước ảnh overlay cho phù hợp */
+                max-height: 60%; /* Tăng kích thước ảnh overlay cho phù hợp */
+            }
+        }
     </style>
 </head>
 <body>
@@ -82,7 +98,6 @@
 
     <!-- Bước 3 -->
     <div id="message3" class="message-container" style="background-image: url('anh3.jpg');">
-       
         <h1 id="message1Text">Anh đã chúc 14/2 năm nay sẽ là năm cuối cùng em một mình.</h1>
         <h1 id="message2Text" class="hidden">Và anh muốn là người thực hiện lời chúc ấy.</h1>
         <img src="anh4.jpg" alt="Anh 4" class="overlay-image" />
