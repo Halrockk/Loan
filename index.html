@@ -16,7 +16,7 @@
     z-index: 1; /* Đảm bảo hình ảnh nằm trên nền */
        }
         body {
-            margin: 100px;
+            margin: 0;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -42,11 +42,11 @@
         h1 {
             font-size: 24px; /* Kích thước chữ lớn cho điện thoại */
             line-height: 1.4; /* Khoảng cách giữa các dòng */
-            margin: 100px ; /* Khoảng cách trên và dưới */
+            margin: 200px ; /* Khoảng cách trên và dưới */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để dễ đọc hơn */
         }
         button {
-            margin-top: 120px;
+            margin-top: 220px;
             padding: 15px 25px; /* Tăng kích thước nút bấm */
             font-size: 18px; /* Kích thước chữ của nút bấm */
             border: none;
@@ -85,8 +85,8 @@
        
         <h1 id="message1Text">Anh đã chúc 14/2 năm nay sẽ là năm cuối cùng em một mình.</h1>
         <h1 id="message2Text" class="hidden">Và anh muốn là người thực hiện lời chúc ấy.</h1>
+        <img src="anh4.jpg" alt="Anh 4" class="overlay-image" />
         <button id="continueButton" onclick="showNextMessage()">Tiếp tục</button>
-          <img src="anh4.jpg" alt="Anh 4" class="overlay-image" />
     </div>
 
     <script>
