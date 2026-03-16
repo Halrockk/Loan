@@ -10,8 +10,8 @@
             top: 80%; /* Căn giữa theo chiều dọc */
             left: 50%; /* Căn giữa theo chiều ngang */
             transform: translate(-50%, -50%); /* Đưa ảnh về giữa */
-            max-width: 40%; /* Giới hạn kích thước hình ảnh */
-            max-height: 40%; /* Giới hạn kích thước hình ảnh */
+            max-width: 60%; /* Giới hạn kích thước hình ảnh */
+            max-height: 60%; /* Giới hạn kích thước hình ảnh */
             z-index: 1; /* Đảm bảo hình ảnh nằm trên nền */
         }
         body {
@@ -19,8 +19,8 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; /* Căn giữa theo chiều dọc */
+            align-items: center; /* Căn giữa theo chiều ngang */
             transition: background 0.5s;
             color: white;
             font-family: 'Arial', sans-serif;
@@ -41,11 +41,12 @@
         h1 {
             font-size: 24px; /* Kích thước chữ lớn cho điện thoại */
             line-height: 1.4; /* Khoảng cách giữa các dòng */
-            margin: 200px; /* Khoảng cách trên và dưới */
+            margin: 0; /* Loại bỏ margin */
+            padding: 20px 0; /* Tạo khoảng cách bằng padding */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Đổ bóng chữ để dễ đọc hơn */
         }
         button {
-            margin-top: 220px;
+            margin-top: 20px; /* Khoảng cách giữa nút và nội dung */
             padding: 15px 25px; /* Tăng kích thước nút bấm */
             font-size: 18px; /* Kích thước chữ của nút bấm */
             border: none;
@@ -62,23 +63,6 @@
         }
         .hidden {
             display: none; /* Định nghĩa lớp Hidden để ẩn các phần tử */
-        }
-
-        /* Media Queries cho điện thoại */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 18px; /* Giảm kích thước chữ cho điện thoại */
-                margin: 100px 0; /* Điều chỉnh khoảng cách trên và dưới */
-            }
-            button {
-                padding: 10px 15px; /* Giảm kích thước nút bấm */
-                font-size: 16px; /* Giảm kích thước chữ của nút bấm */
-                margin-top: 100px; /* Điều chỉnh khoảng cách trên nút bấm */
-            }
-            .overlay-image {
-                max-width: 60%; /* Tăng kích thước ảnh overlay cho phù hợp */
-                max-height: 60%; /* Tăng kích thước ảnh overlay cho phù hợp */
-            }
         }
     </style>
 </head>
