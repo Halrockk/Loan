@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chào Em!</title>
     <style>
-    overlay-image {
+   
+    
+        message-container {
+    background-size: contain; /* Giữ nguyên tỷ lệ khung hình của hình nền */
+    background-position: center; /* Căn giữa hình nền */
+       }
+        overlay-image {
     position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối */
     top: 50%; /* Căn giữa theo chiều dọc */
     left: 50%; /* Căn giữa theo chiều ngang */
@@ -13,7 +19,7 @@
     max-width: 80%; /* Giới hạn kích thước hình ảnh */
     max-height: 80%; /* Giới hạn kích thước hình ảnh */
     z-index: 1; /* Đảm bảo hình ảnh nằm trên nền */
-}
+       }
         body {
             margin: 0;
             height: 100vh;
